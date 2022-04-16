@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './Header.css'
 
 const Header = () => {
     return (
         <div>
-            <Navbar className='navbar' collapseOnSelect expand="lg" bg="light" variant="primary">
+            <Navbar className='navbar' collapseOnSelect expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">Art: Mahdi Ki</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -15,15 +16,15 @@ const Header = () => {
                             <Nav.Link href="home#gallery">Gallery</Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="/register">Register</Nav.Link>
-                            <Nav.Link as={Link} to="/signin">
+                            <Nav.Link as={Link} to="register">Register</Nav.Link>
+                            <Nav.Link as={Link} to="login">
                                 Sign In
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-        </div>
+        </div >
     );
 };
 

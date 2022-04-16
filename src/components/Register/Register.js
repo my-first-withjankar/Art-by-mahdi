@@ -1,4 +1,6 @@
 import React from 'react';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import './Register.css'
 
 const Register = () => {
     return (
@@ -11,6 +13,7 @@ const Register = () => {
                     <input className='shadow-sm border border-white bg-light' type="password" name="confirmPassword" id="" placeholder='Confirm Password' />
                     <input className='shadow-sm border border-white bg-danger text-white' type="submit" value="Sign Up" />
                 </form>
+                <SocialLogin>   </SocialLogin>
             </div>
         </div>
     );
