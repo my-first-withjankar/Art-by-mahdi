@@ -9,8 +9,12 @@ const Gallery = () => {
 
 
     return (
-        <div className='container mt-5' id='gallery'>
-            <h1 className='mb-5'>MAHDIS'S GALLERY</h1>
+        <div className='container my-5' id='gallery'>
+            <div className=' d-flex align-items-center flex-column mb-5'>
+                <div className='w-50' style={{ height: '1px', backgroundColor: 'lightgray' }}></div>
+                <h2 style={{ color: 'rgb(116, 116, 116)' }}>MAHDIS'S GALLERY</h2>
+                <div className='w-50' style={{ height: '1px', backgroundColor: 'lightgray' }}></div>
+            </div>
             <div className='d-flex justify-content-center row  img-hover overflow-hidden'>
                 <div className='img-container d-inline col-md-6 col-sm-12'>
                     <img className='w-100 h-100' src={service1} alt="" />

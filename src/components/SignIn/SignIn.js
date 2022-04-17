@@ -29,7 +29,9 @@ const SignIn = () => {
     const handlePassword = (e) => {
         setPassword(e.target.value)
     }
-
+    if (user) {
+        navigate(from, { replace: true })
+    }
     if (error) {
         emailError = <p className='text-danger'>Error: {error?.message}</p>
     }
@@ -44,16 +46,17 @@ const SignIn = () => {
 
 
 
-    useEffect(() => {
-        if (user) {
-            navigate(from);
-        }
-    }, [user]);
+    // useEffect(() => {
+    //     if (user) {
+    //         navigate(from);
+    //     }
+    // }, [user]);
 
 
     return (
         <div>
-            <div className='form-container container'>
+            <div className='form-container container mt-5'>
+                <h2 className='text-center'>WELCOME BACK</h2>
                 <form
                     onSubmit={handleSignIn}
                     className='row d-flex flex-column align-items-center '>

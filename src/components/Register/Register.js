@@ -76,7 +76,9 @@ const Register = () => {
     }
     return (
         <div>
-            <div className='form-container container'>
+            <div className='form-container container mt-5'>
+                <h2 className='text-center'>Hello There,</h2>
+                <p className='text-center'>Register Now to explore more</p>
                 <form onSubmit={handleCreateUser} className='row d-flex flex-column align-items-center '>
                     <input className='shadow-sm border border-white bg-light' type="text" placeholder='Name' required />
                     <input

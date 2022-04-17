@@ -2,8 +2,20 @@ import React from 'react';
 import google from '../../images/social/google.png'
 import facebook from '../../images/social/facebook.png'
 import github from '../../images/social/github.png'
+import auth from '../../Home/firebase.init';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 
 const SocialLogin = () => {
+    const navigate = useNavigate()
+    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+    const handleSignInWithGoogle = () => {
+        signInWithGoogle()
+    }
+    if (user) {
+        navigate('/')
+    }
     return (
         <>
             <div className='d-flex align-items-center justify-content-center w-25 mx-auto'>
@@ -13,6 +25,7 @@ const SocialLogin = () => {
             </div>
             <div className='d-flex align-items-center justify-content-center mt-0 w-25 mx-auto'>
                 <button
+                    onClick={handleSignInWithGoogle}
                     className='border-0 rounded-circle d-block bg-white'>
                     <img
                         style={{ height: '35px' }}
