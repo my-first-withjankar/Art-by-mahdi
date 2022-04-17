@@ -17,3 +17,8 @@ form {
 
     align-items: center;
 }
+
+.error-message {
+    padding-right: 240px !important;
+    color: red;
+}

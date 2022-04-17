@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import art1 from '../../images/banner/art1.jpg';
 import art2 from '../../images/banner/art2.jpg';
 import art3 from '../../images/banner/art3.jpg'
+import './Banner.css'
 
 const Banner = () => {
     return (
@@ -14,9 +15,9 @@ const Banner = () => {
                         src={art1}
                         alt="First slide"
                     />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <Carousel.Caption className='first-slide'>
+                        <h3 className=''>First slide label</h3>
+                        <p className="">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -26,7 +27,7 @@ const Banner = () => {
                         alt="Second slide"
                     />
 
-                    <Carousel.Caption>
+                    <Carousel.Caption className='second-slide'>
                         <h3>Second slide label</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </Carousel.Caption>
@@ -44,7 +45,7 @@ const Banner = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-        </div>
+        </div >
     );
 };
 

@@ -1,22 +1,26 @@
 [
     {
-        "picture": "https://i.ibb.co/D4pPRHJ/framed-Prints001.jpg",
-        "name": "Holmes Santana"
+        "_id": "625bf8f8309471d8f3e722b9",
+        "price": 0,
+        "description": "890c5d6d-0e60-4c29-b8f9-f65015a0643a",
+        "rating": "$3,417.80",
+        "img": "https://i.ibb.co/mDH8DRN/canvas-Prints.jpg",
+        "name": "Parks Russo"
     },
     {
-        "picture": "https://i.ibb.co/JjF9zwy/homepage-Product-Canvas-Print002.jpg",
-        "name": "Glass Mann"
+        "_id": "625bf8f8986ea8837886843e",
+        "price": 1,
+        "description": "6b7c4ea8-2a18-4bb4-b14a-121d9c5d7ecf",
+        "rating": "$3,197.89",
+        "img": "https://i.ibb.co/48fr7HR/wood-Prints.jpg",
+        "name": "Dickson Lewis"
     },
     {
-        "picture": "https://i.ibb.co/HXdfSMw/acrylicprints.jpg",
-        "name": "Karin Avila"
-    },
-    {
-        "picture": "https://i.ibb.co/vcfRBPz/posterprints.jpg",
-        "name": "Karin Avila"
-    },
-    {
-        "picture": "https://i.ibb.co/42ZN90z/artprints.jpg",
-        "name": "Karin Avila"
+        "_id": "625bf8f86d1df6249396df39",
+        "price": 2,
+        "description": "126d5d55-a8b6-4e1d-aa10-c3c3c3a497d9",
+        "rating": "$3,005.40",
+        "img": "https://i.ibb.co/XZFYNKF/framed-Prints.jpg",
+        "name": "Preston Whitley"
     }
 ]
