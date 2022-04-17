@@ -1,26 +1,26 @@
 [
     {
         "_id": "625bf8f8309471d8f3e722b9",
-        "price": 0,
-        "description": "890c5d6d-0e60-4c29-b8f9-f65015a0643a",
+        "price": 450,
+        "description": "Just choose your canvas size and wrap thickness, upload your pictures or  art, and choose your border for a custom canvas print of your own. We can't wait for you to see the high quality of our canvas pictures! Turn your photos to canvas with Easy Canvas Prints™. Our canvas photo prints are great for decorating your home or office, and perfect as photo gifts! With our easy to use designer, you can turn your very own image into a stunning work of art on canvas! Our canvas prints are printed and stretched in Austin, Texas by our team of canvas professionals, and each one comes ready to hang with a classic semi-gloss finish",
         "rating": "$3,417.80",
         "img": "https://i.ibb.co/mDH8DRN/canvas-Prints.jpg",
-        "name": "Parks Russo"
+        "name": "Canvas Prints"
     },
     {
         "_id": "625bf8f8986ea8837886843e",
-        "price": 1,
-        "description": "6b7c4ea8-2a18-4bb4-b14a-121d9c5d7ecf",
+        "price": 350,
+        "description": "Printing on wooden blocks creates a unique, organic photo that standsthe test of time and gives your image a special effect. With this process, your image fuses with the wood, and you see the grain through the ink. No two prints are alike due to the revealed grain. Whether you want to make your image stand out in a gallery full of other photos, give a one-of-a-kind gift to someone or simply display an eye-catching picture on your wall, wood prints are an excellent way to do it.",
         "rating": "$3,197.89",
         "img": "https://i.ibb.co/48fr7HR/wood-Prints.jpg",
-        "name": "Dickson Lewis"
+        "name": "Wood Prints"
     },
     {
         "_id": "625bf8f86d1df6249396df39",
-        "price": 2,
-        "description": "126d5d55-a8b6-4e1d-aa10-c3c3c3a497d9",
+        "price": 525,
+        "description": "Framed prints are the most traditional way of putting a photograph up on display. It most definitely has an aesthetic quality that is quite popular. When printing your photos, you have a choice of paper used, either matte or glossy, both of which provide a professional finish to your photograph. Below mentioned are some advantages and disadvantages of framed prints.",
         "rating": "$3,005.40",
         "img": "https://i.ibb.co/XZFYNKF/framed-Prints.jpg",
-        "name": "Preston Whitley"
+        "name": "Framed Prints"
     }
 ]

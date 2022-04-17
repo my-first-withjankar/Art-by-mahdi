@@ -1,0 +1,14 @@
+.service-img:hover {
+    transform: scale(1.05);
+    transition: transform 1s ease-out;
+}
+
+.service-btn {
+    background-color: rgba(89, 134, 173, 0.6) !important;
+    border: none !important;
+    color: rgba(254, 254, 254, 0.888);
+}
+
+.service-btn:hover {
+    background-color: rgba(89, 135, 250, 0.655) !important;
+}

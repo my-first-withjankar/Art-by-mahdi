@@ -12,9 +12,9 @@ const Services = () => {
     }, [])
 
     return (
-        <div id='services' className='mt-5 container'>
-            <h1>MAHID'S ART SERVICE </h1>
-            <div className="row">
+        <div id='services' className='mt-5 mb-4 container'>
+            <h1 className='mb-5'>MAHID'S ART SERVICE </h1>
+            <div className="row g-5">
                 {
                     services.map(service => <Service key={service._id} service={service}></Service>)
                 }

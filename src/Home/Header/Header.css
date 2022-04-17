@@ -1,11 +1,19 @@
-body {}
-
 .navbar {
-    background-color: rgba(253, 235, 235, 0.521);
+    background-color: rgba(89, 134, 173, 0.6);
+    padding: 15px 0;
 
 }
 
 .navbar a {
-    color: rgba(236, 218, 218, 0.747);
+    color: rgba(255, 255, 255, 0.84) !important;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.link {
+    padding: 5px 15px !important;
+}
+
+.link:hover {
+    background-color: rgb(196, 108, 220);
+    border-radius: 15px;
 }

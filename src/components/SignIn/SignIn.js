@@ -1,16 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Home/firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './SignIn.css'
 
 const SignIn = () => {
     const navigate = useNavigate()
+    const location = useLocation();
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    let from = location.state?.from?.pathname || "/";
 
-    let fuck;
+    let emailError;
 
     const [
         signInWithEmailAndPassword,
@@ -29,7 +31,7 @@ const SignIn = () => {
     }
 
     if (error) {
-        fuck = <p className='text-danger'>Error: {error?.message}</p>
+        emailError = <p className='text-danger'>Error: {error?.message}</p>
     }
 
     const handleSignIn = (e) => {
@@ -40,9 +42,13 @@ const SignIn = () => {
     }
 
 
-    if (user) {
-        navigate('/')
-    }
+
+
+    useEffect(() => {
+        if (user) {
+            navigate(from);
+        }
+    }, [user]);
 
 
     return (
