@@ -16,8 +16,8 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption className='first-slide'>
-                        <h3 className=''>First slide label</h3>
-                        <p className="">Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3 style={{ color: 'rgba(0, 0, 0, 0.826)' }}>INTRODUCING ART BY</h3>
+                        <h1 className="text-dark fs-1">MAHDI KI</h1>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -28,8 +28,16 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption className='second-slide'>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h1
+                            className='bg-dark d-inline-block py-1 px-4'
+                            style={{ color: 'white' }}>ART YOU'LL LOVE
+                        </h1>
+                        <p>
+                            <button
+                                style={{ backgroundColor: 'lightblue', borderRadius: '5px', }}
+                                className='border-0 py-2 px-4 fs-4 '>COLLECT IT
+                            </button>
+                        </p>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -40,8 +48,16 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h1
+                            className='fs-1 fw-800 d-inline-block py-1 px-5'
+                            style={{ color: 'black', backgroundColor: 'rgba(219, 218, 218, 0.944)' }}>
+                            DISCOVER ART YOU LOVE
+                        </h1>
+                        <p
+                            style={{ backgroundColor: 'rgba(127, 202, 227, 0.749)' }}
+                            className='fs-4 '>
+                            Browse Curated Collection Updated Daily
+                        </p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

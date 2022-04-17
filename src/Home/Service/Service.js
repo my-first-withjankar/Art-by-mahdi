@@ -6,18 +6,9 @@ import auth from '../firebase.init';
 import './Service.css'
 
 const Service = ({ service }) => {
-    const navigate = useNavigate()
     const [user] = useAuthState(auth)
     const { _id, name, img, description, price } = service;
 
-    // const handleBooking = () => {
-    //     if (user) {
-    //         navigate('/checkout ')
-    //     }
-    //     else {
-    //         navigate('/login')
-    //     }
-    // }
 
     return (
         <>
@@ -25,7 +16,7 @@ const Service = ({ service }) => {
                 <Card.Img variant="top" className=' pt-3 service-img border-none' height={'400px'} src={img} />
                 <Card.Body>
                     <Card.Title>{name}</Card.Title>
-                    <Card.Text className='mb-1'>
+                    <Card.Text className='mb-1 description'>
                         {description.slice(0, 70) + '...'}
                     </Card.Text>
                     <p className='text-align-center mt-0'>${price}</p>
