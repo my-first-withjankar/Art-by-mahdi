@@ -4,17 +4,19 @@ import facebook from '../../images/social/facebook.png'
 import github from '../../images/social/github.png'
 import auth from '../../Home/firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const SocialLogin = () => {
     const navigate = useNavigate()
+    const location = useLocation()
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    let from = location.state?.from?.pathname || "/";
 
     const handleSignInWithGoogle = () => {
         signInWithGoogle()
     }
     if (user) {
-        navigate('/')
+        navigate(from)
     }
     return (
         <>

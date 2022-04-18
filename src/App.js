@@ -13,7 +13,7 @@ import Home from './Home/Home/Home';
 
 function App() {
   return (
-    <div>
+    <div className='overflow-hidden'>
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>

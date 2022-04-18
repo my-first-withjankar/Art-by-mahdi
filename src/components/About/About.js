@@ -42,6 +42,9 @@ const About = () => {
                 <h2 style={{ color: 'rgb(116, 116, 116)' }}>RUN TOWARDS GOAL </h2>
                 <div className='w-25' style={{ height: '1px', backgroundColor: 'lightgray' }}></div>
             </div>
+            <div style={{ paddingLeft: '560px', paddingRight: '550px', textAlign: 'justify' }}>
+                <p>Right now i'm in a web devoloping course, i am tring to do my best. in 24 hours i spent more than 15 hours in courses, how they say to do , try to do that as much as possible .</p>
+            </div>
         </>
     );
 };

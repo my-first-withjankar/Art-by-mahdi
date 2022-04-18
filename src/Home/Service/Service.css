@@ -11,4 +11,5 @@
 
 .service-btn:hover {
     background-color: rgba(89, 135, 250, 0.655) !important;
+    color: rgba(155, 148, 148, 0.934);
 }
