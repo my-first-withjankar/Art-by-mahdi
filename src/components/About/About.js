@@ -37,6 +37,11 @@ const About = () => {
                     in the mean time i got jhankar the hero . and took his instruction as a guidelile . then started a new life with jhankar's heroes.
                     and it's going as good as could be.   </p>
             </div>
+            <div className=' d-flex align-items-center flex-column mb-5 mt-4'>
+                <div className='w-25' style={{ height: '1px', backgroundColor: 'lightgray' }}></div>
+                <h2 style={{ color: 'rgb(116, 116, 116)' }}>RUN TOWARDS GOAL </h2>
+                <div className='w-25' style={{ height: '1px', backgroundColor: 'lightgray' }}></div>
+            </div>
         </>
     );
 };
