@@ -3,12 +3,14 @@ import SocialLogin from '../SocialLogin/SocialLogin';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './Register.css'
 import auth from '../../Home/firebase.init';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const navigate = useNavigate()
+    const location = useLocation()
+
     const [userInfo, setUserInfo] = useState({
         email: "",
         password: "",
@@ -26,6 +28,8 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+    let from = location.state?.from?.pathname || "/";
 
     const handleEmailChange = (e) => {
         const validEmail = /\S+@\S+\.\S+/.test(e.target.value)
@@ -74,7 +78,7 @@ const Register = () => {
         console.log(userInfo.email, userInfo.password);
     }
     if (user) {
-        navigate('/')
+        navigate(from, { replace: true })
     }
     if (error) {
         toast(error.message)
