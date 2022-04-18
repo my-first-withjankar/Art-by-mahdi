@@ -1,6 +1,6 @@
 # Artist: Mahdi Ki
 
-my project live link [Create React App](https://art-by-mahdi-ki.web.app).
+my project live link [https://art-by-mahdi-ki.web.app].
 
 * this web for a particular person named: Mahdi Ki
 * in this web added a header , a services section and a gallery section.
