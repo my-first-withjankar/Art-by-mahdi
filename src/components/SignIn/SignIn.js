@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import React, { useState } from 'react';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../Home/firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './SignIn.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignIn = () => {
     const navigate = useNavigate()
@@ -21,6 +23,7 @@ const SignIn = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
     const handleEmail = (e) => {
         setEmail(e.target.value)
@@ -43,20 +46,17 @@ const SignIn = () => {
 
     }
 
+    const handleResetPassword = async () => {
+        await sendPasswordResetEmail(email)
+        toast('Send A mail to your Gmail')
+    }
 
-
-
-    // useEffect(() => {
-    //     if (user) {
-    //         navigate(from);
-    //     }
-    // }, [user]);
 
 
     return (
         <div>
             <div className='form-container container mt-5'>
-                <h2 className='text-center'>WELCOME BACK</h2>
+                <h2 className='text-center'><em>WELCOME BACK</em></h2>
                 <form
                     onSubmit={handleSignIn}
                     className='row d-flex flex-column align-items-center '>
@@ -78,12 +78,15 @@ const SignIn = () => {
                         error?.message && <p>{error?.message}</p>
                     }
                     <input
-                        className='shadow-sm border border-white bg-danger text-white'
+                        style={{ backgroundColor: 'rgba(89, 134, 173, 0.6)' }}
+                        className='shadow-sm border border-white text-white'
                         type="submit"
                         value="Sign Up" />
                 </form>
                 <p className='text-center'>New to Mahdi's Art Gallery? <Link className='text-decoration-none' to='/register'>Register Now</Link> </p>
+                <p className='text-center pr-5'>Forget Password?<button onClick={handleResetPassword} className='btn btn-link text-decoration-none' to='/register'>Reset Here</button> </p>
                 <SocialLogin>   </SocialLogin>
+                <ToastContainer />
             </div>
         </div>
     );

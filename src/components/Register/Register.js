@@ -4,6 +4,8 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import './Register.css'
 import auth from '../../Home/firebase.init';
 import { Link, useNavigate } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
     const navigate = useNavigate()
@@ -23,7 +25,7 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth);
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
     const handleEmailChange = (e) => {
         const validEmail = /\S+@\S+\.\S+/.test(e.target.value)
@@ -48,7 +50,7 @@ const Register = () => {
             setErrors({ ...errors, passwordError: '' })
         }
         else {
-            setErrors({ ...errors, passwordError: 'Minimum 8 characters and a number and a ' })
+            setErrors({ ...errors, passwordError: 'Minimum eight characters, at least one letter and one number' })
             setUserInfo({ ...userInfo, password: '' })
         }
     }
@@ -74,10 +76,13 @@ const Register = () => {
     if (user) {
         navigate('/')
     }
+    if (error) {
+        toast(error.message)
+    }
     return (
         <div>
             <div className='form-container container mt-5'>
-                <h2 className='text-center'>Hello There,</h2>
+                <h2 className='text-center'><em>Hello There,</em></h2>
                 <p className='text-center'>Register Now to explore more</p>
                 <form onSubmit={handleCreateUser} className='row d-flex flex-column align-items-center '>
                     <input className='shadow-sm border border-white bg-light' type="text" placeholder='Name' required />
@@ -110,13 +115,21 @@ const Register = () => {
                         name="confirmPassword" id=""
                         placeholder='Confirm Password'
                         required />
-                    {/* {
-                        errors?.confirmPasswordError && <p className='error-message'>{errors?.confirmPasswordError}</p>
-                    } */}
-                    <input className='shadow-sm border border-white bg-danger text-white' type="submit" value="Sign Up" />
+
+                    <input
+                        style={{ backgroundColor: 'rgba(89, 134, 173, 0.6)' }}
+                        className='shadow-sm border border-white text-white'
+                        type="submit" value="Sign Up" />
                 </form>
-                <p className='text-center'>Already have an account? <Link className='text-decoration-none' to='/login'>Sign In</Link> </p>
+                <p
+                    className='text-center'>Already have an account?
+                    <Link
+                        className='text-decoration-none'
+                        to='/login'>Sign In
+                    </Link>
+                </p>
                 <SocialLogin></SocialLogin>
+                <ToastContainer />
             </div>
         </div>
     );

@@ -29,13 +29,13 @@ const Banner = () => {
 
                     <Carousel.Caption className='second-slide'>
                         <h1
-                            className='bg-dark d-inline-block py-1 px-4'
-                            style={{ color: 'white' }}>ART YOU'LL LOVE
+                            className=' d-inline-block py-1 px-4'
+                            style={{ color: 'white', backgroundColor: 'rgba(155, 148, 148, 0.934)' }}>ART YOU'LL LOVE
                         </h1>
                         <p>
                             <button
-                                style={{ backgroundColor: 'lightblue', borderRadius: '5px', }}
-                                className='border-0 py-2 px-4 fs-4 '>COLLECT IT
+                                style={{ backgroundColor: 'lightblue', }}
+                                className='border-0 py-1 px-2 fs-5 '>COLLECT IT
                             </button>
                         </p>
                     </Carousel.Caption>
@@ -53,9 +53,11 @@ const Banner = () => {
                             style={{ color: 'black', backgroundColor: 'rgba(219, 218, 218, 0.944)' }}>
                             DISCOVER ART YOU LOVE
                         </h1>
+                        <br />
+
                         <p
                             style={{ backgroundColor: 'rgba(127, 202, 227, 0.749)' }}
-                            className='fs-4 '>
+                            className='fs-4 d-inline-block py-1 px-3 text-dark '>
                             Browse Curated Collection Updated Daily
                         </p>
                     </Carousel.Caption>
